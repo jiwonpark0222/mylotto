@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_lotto"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.lotto.mylotto.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/constellationActivity"
+        android:name="com.lotto.mylotto.ConstellationActivity"
+        android:label="activity_constellation"
+        tools:layout="@layout/activity_constellation" />
+    <activity
+        android:id="@+id/nameActivity"
+        android:name="com.lotto.mylotto.NameActivity"
+        android:label="activity_name"
+        tools:layout="@layout/activity_name" />
+    <activity
+        android:id="@+id/resultActivity"
+        android:name="com.lotto.mylotto.ResultActivity"
+        android:label="activity_result"
+        tools:layout="@layout/activity_result" />
+</navigation>
