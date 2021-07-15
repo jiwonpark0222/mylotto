@@ -2,6 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lotto.mylotto">
 
+    <!-- 인터넷 사용 권한 설정 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,9 +17,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyLotto">
-        <activity android:name=".ResultActivity"></activity>
-        <activity android:name=".NameActivity" />
-        <activity android:name=".ConstellationActivity" />
+        <activity android:name=".ResultActivity"
+            android:theme="@style/Theme.MyLotto.Result"/>
+        <activity android:name=".NameActivity"
+            android:theme="@style/Theme.MyLotto.Name"/>
+        <activity android:name=".ConstellationActivity"
+            android:theme="@style/Theme.MyLotto.Constellation"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

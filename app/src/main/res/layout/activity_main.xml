@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_weight="1"
     android:orientation="vertical"
-    android:weightSum="3"
+    android:weightSum="5"
     tools:context=".MainActivity">
 
-
     <androidx.cardview.widget.CardView
+        android:id="@+id/lottoInfo"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_gravity="right"
-        android:layout_weight="1"
+        android:layout_weight="2"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
         app:cardCornerRadius="8dp"
-        >
+        app:cardUseCompatPadding="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,14 +32,123 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="971회 1등 당첨금액"
+                    android:textSize="24sp" />
+                <TextView
+                    android:id="@+id/lottoDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    tools:text="(2021-07-10)" />
+                <TextView
+                    android:id="@+id/lottoAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    tools:text="3,737,545,000원" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:id="@+id/lottoNo1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:srcCompat="@drawable/ball_01" />
+                    <ImageView
+                        android:id="@+id/lottoNo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="8dp"
+                        app:srcCompat="@drawable/ball_01" />
+                    <ImageView
+                        android:id="@+id/lottoNo3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="8dp"
+                        app:srcCompat="@drawable/ball_01" />
+                    <ImageView
+                        android:id="@+id/lottoNo4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="8dp"
+                        app:srcCompat="@drawable/ball_01" />
+                    <ImageView
+                        android:id="@+id/lottoNo5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="8dp"
+                        app:srcCompat="@drawable/ball_01" />
+                    <ImageView
+                        android:id="@+id/lottoNo6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="8dp"
+                        app:srcCompat="@drawable/ball_01" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="12dp"
+                        app:srcCompat="@android:drawable/ic_input_add" />
+                    <ImageView
+                        android:id="@+id/lottoBonusNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="8dp"
+                        app:srcCompat="@drawable/ball_01" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/randomCard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="랜덤으로 번호 생성"
                     android:textSize="24sp" />
 
                 <TextView
-                    android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -48,20 +157,22 @@
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                tools:srcCompat="@drawable/lottery" />
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                app:srcCompat="@drawable/lottery" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/constellationCard"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_gravity="right|center_vertical"
         android:layout_weight="1"
-        app:cardCornerRadius="8dp" >
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -77,14 +188,12 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="별자리로 번호 생성"
                     android:textSize="24sp" />
 
                 <TextView
-                    android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -93,20 +202,22 @@
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                tools:srcCompat="@drawable/constellation" />
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                app:srcCompat="@drawable/constellation" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/nameCard"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_gravity="right|center_vertical"
         android:layout_weight="1"
-        app:cardCornerRadius="8dp" >
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -122,14 +233,12 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="이름으로 번호 생성"
                     android:textSize="24sp" />
 
                 <TextView
-                    android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -138,10 +247,9 @@
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                tools:srcCompat="@drawable/name" />
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                app:srcCompat="@drawable/name" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
